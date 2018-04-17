@@ -2,4 +2,4 @@
 .htaccess
 vendor/*
 /public/img/
-*~
+
