@@ -1,6 +1,9 @@
 # Silex-Framework-test
 Exploring the Silex framework.
 
+Run composer install
+create database
+
 Enter your database details in App/config/settings.yml
 
     driver: pdo_mysql
