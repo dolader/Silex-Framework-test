@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+    {% block main_content %}
+    {% if posts %}
+          <h1 class="mt-4">Overzicht berichten van {{posts[0].authorName}}</h1>
+    {% for post in posts %}
+            <h3 class="mt-4">{{ post.title}}</h3>
+                <h5 class="mt-4">Geschreven door:<small><a href="/author/{{post.authorName}}"> {{post.authorName}}     </a></small></h5>
+                     <p><small>Gepubliceerd op: {{ post.PostDate| date('Y-m-d H:m') }}</small></p>
+                    <hr>
+                 <div class="card bg-secondary mb-3 p-3">
+               <p>{{post.message}}</p>
+          </div>
+    {% endfor %}
+     <a  href="/author/{{posts[0].authorName}}" class="btn btn-info btn-small mb-4 mt-3">Terug</a>   
+     {% endif %}
+       
+    {% endblock %}
+

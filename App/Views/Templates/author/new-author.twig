@@ -1,0 +1,14 @@
+{% extends 'base.twig' %}
+
+    {% block main_content %}
+    <h1>Voeg een nieuwe auteur toe</h1>
+   
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form)}}
+        
+   
+    {% endblock %}
+    {% block javascripts %}
+    <script src="./js/db_ajax.js"></script>
+    {% endblock %}

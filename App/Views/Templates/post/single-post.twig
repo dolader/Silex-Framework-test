@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+    {% block main_content %}
+               <h1 class="mt-4">{{post.title}}</h1>
+                  <h5 class="mt-4">Geschreven door:<small><a href="/author/{{post.authorName}}"> {{ post.authorName}}</a></small></h5>
+                     <p><small>Gepubliceerd op: {{ post.PostDate| date('Y-m-d H:m') }}</small></p>
+                 <hr>
+                <p>{{post.message}}</p>         
+            <a href="/" class="btn btn-info btn-small">Terug</a>   
+   
+    {% endblock %}
+
